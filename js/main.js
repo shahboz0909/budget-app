@@ -32,6 +32,14 @@ if(elInput.value != 0 && elInput.value.length < 9 ){
         
     })
     } 
+
+    elBalanceSpan.textContent = yourMoney.reduce(function(acc, element) {
+        return acc + element;
+    })
+    - 
+    yourBalance.reduce(function(xisob, element) {
+    return xisob + element;
+    })
     
 });
 
@@ -50,7 +58,9 @@ elButtonBottom.addEventListener("click", function(evt){
 
     elBalanceSpan.textContent = yourMoney.reduce(function(acc, element) {
         return acc + element;
-    }) - yourBalance.reduce(function(xisob, element) {
+    })
+    - 
+    yourBalance.reduce(function(xisob, element) {
     return xisob + element;
     })
 })
