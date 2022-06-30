@@ -19,6 +19,18 @@ let yourMoney = [];
 let yourBalance = [];
 let allBalance = [];
 
+
+
+function work() {
+    elBalanceSpan.textContent = yourMoney.reduce(function(acc, element) {
+        return acc + element;
+    })
+    - 
+    yourBalance.reduce(function(xisob, element) {
+    return xisob + element;
+    })
+}
+
 elButton.addEventListener('click', function(evt) {
     evt.preventDefault();
 
@@ -33,14 +45,7 @@ if(elInput.value != 0 && elInput.value.length < 9 ){
     })
     } 
 
-    elBalanceSpan.textContent = yourMoney.reduce(function(acc, element) {
-        return acc + element;
-    })
-    - 
-    yourBalance.reduce(function(xisob, element) {
-    return xisob + element;
-    })
-    
+    work();
 });
 
 elButtonBottom.addEventListener("click", function(evt){
@@ -55,13 +60,6 @@ elButtonBottom.addEventListener("click", function(evt){
     elInputBottom.value = null
     }
 
-
-    elBalanceSpan.textContent = yourMoney.reduce(function(acc, element) {
-        return acc + element;
-    })
-    - 
-    yourBalance.reduce(function(xisob, element) {
-    return xisob + element;
-    })
+    work();
 })
 
