@@ -19,8 +19,6 @@ let yourMoney = [];
 let yourBalance = [];
 let allBalance = [];
 
-
-
 function work() {
     elBalanceSpan.textContent = yourMoney.reduce(function(acc, element) {
         return acc + element;
@@ -59,7 +57,7 @@ elButtonBottom.addEventListener("click", function(evt){
     })
     elInputBottom.value = null
     }
-
+    
     work();
 })
 
